@@ -73,8 +73,6 @@
     <div class="modal-backdrop" id="modal-backdrop"></div>
     <div class="modal-content" role="dialog" aria-modal="true">
       <button id="modal-close" class="icon-btn" aria-label="Close">✕</button>
-      <button id="modal-prev" class="icon-btn modal-arrow" aria-label="Previous">◀</button>
-      <button id="modal-next" class="icon-btn modal-arrow" aria-label="Next">▶</button>
       <div class="modal-body">
         <div class="modal-image-wrap"><img id="modal-image" src="" alt="Item image"/></div>
         <div class="modal-info">
@@ -82,6 +80,10 @@
           <div id="modal-meta" class="meta"></div>
           <div id="modal-price" class="price"></div>
           <div id="modal-sell" class="sold-price"></div>
+          <div class="modal-nav">
+            <button id="modal-prev" class="nav-btn" aria-label="Previous">◀ Previous</button>
+            <button id="modal-next" class="nav-btn" aria-label="Next">Next ▶</button>
+          </div>
         </div>
       </div>
     </div>
@@ -106,8 +108,6 @@
   <script src="script.js"></script>
 </body>
 </html>
-
-        .container {
             max-width: 1200px;
             margin: 0 auto;
             background: white;
