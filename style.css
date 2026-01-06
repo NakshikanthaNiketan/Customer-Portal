@@ -187,6 +187,11 @@ body {
   background: #f0f0f0;
 }
 
+.card.sold .card-image {
+  filter: blur(4px);
+  opacity: 0.6;
+}
+
 .card-content {
   padding: 16px;
 }

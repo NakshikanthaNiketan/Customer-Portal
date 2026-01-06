@@ -184,7 +184,7 @@ function renderGrid() {
 
   filteredItems.forEach((item, idx) => {
     const card = document.createElement('div');
-    card.className = 'card';
+    card.className = item.status === 'Sold' ? 'card sold' : 'card';
     card.innerHTML = `
       <img src="${getImageUrl(item.photo)}" alt="${item.number}" class="card-image" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22200%22%3E%3Crect fill=%22%23ddd%22 width=%22200%22 height=%22200%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-size=%2216%22 fill=%22%23999%22%3ENo Image%3C/text%3E%3C/svg%3E'">
       <div class="card-content">
@@ -214,7 +214,7 @@ function getImageUrl(photoUrl) {
     
     for (let m of matches) {
       if (m && m[1]) {
-        return `https://lh3.google.com/d/${m[1]}=w400`;
+        return `https://lh3.googleusercontent.com/d/${m[1]}=w400`;
       }
     }
   }
